@@ -1,3 +1,4 @@
 <?php
-echo "connected to server " + getHostByName(getHostName());
+print("It works!! :)");
+print(getHostByName(getHostName()));
 ?>
