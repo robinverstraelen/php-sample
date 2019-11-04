@@ -1,28 +1,16 @@
 <?php
-print("It works!! :)");
-print(getHostByName(getHostName()));
-$db_ip = "%DB_TIER_IP%";
-print($db_ip);
+echo "Connecting<br/>";
 
-function OpenCon(){
-    $dbhost = "%DB_TIER_IP%";
-    $dbuser = "appuser";
-    $dbpass = "C1sco123&";
-    $db = "employees";
-    $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+$dbhost = "%DB_TIER_IP%";
+$dbuser = "appuser";
+$dbpass = "C1sco123&";
+$db = "employees";
+$conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
 
-    return $conn;
-}
- 
-function CloseCon($conn){
-    $conn -> close();
-}
-
-$conn = OpenCon();
 echo "Connected Successfully<br/>";
 $emp_no = $_GET["id"];
 
-if (empty($_GET)) {
+if (empty($_GET["id"])) {
     echo "No id provided";
 }
 else {
@@ -38,6 +26,5 @@ else {
         echo "0 results";
     }
 }
-CloseCon($conn);
 ?>
 
