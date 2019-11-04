@@ -6,7 +6,7 @@ $dbhost = "%DB_TIER_IP%";
 $dbuser = "appuser";
 $dbpass = "C1sco123&";
 $db = "employees";
-$conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+$conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
 
 echo "Connected Successfully<br/>";
 $emp_no = $_GET["id"];
