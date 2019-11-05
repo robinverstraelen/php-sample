@@ -1,10 +1,5 @@
 <?php
-echo getHostByName(getHostName());
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-#$dbhost = "%DB_TIER_IP%";
-$dbhost = "35.195.49.247";
+$dbhost = "%DB_TIER_IP%";
 $dbuser = "appuser";
 $dbpass = "C1sco123&";
 $db = "employees";
