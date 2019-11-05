@@ -10,13 +10,6 @@ $db = "employees";
 $conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
 
 $emp_no = $_GET["id"];
-
-if (empty($_GET["id"])) {
-    echo "No id provided";
-}
-else {
-    $sql = "SELECT first_name, last_name, salary FROM employees INNER JOIN salaries ON employees.emp_no = salaries.emp_no WHERE salaries.to_date like '%9999%' AND employees.emp_no = $emp_no";
-    $result = $conn->query($sql);
     
 ?>
 <html>
