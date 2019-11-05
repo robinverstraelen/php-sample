@@ -8,8 +8,6 @@ $dbuser = "appuser";
 $dbpass = "C1sco123&";
 $db = "employees";
 $conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
-
-$emp_no = $_GET["id"];
     
 ?>
 <html>
@@ -768,6 +766,7 @@ body {
         } else {
             echo "<tr><td data-title='Name'>No data</td><td data-title='Salary'>No data</td>";
         }
+      }
       ?>
       </tbody>
     </table>
@@ -785,6 +784,3 @@ body {
 </body>
 
 </html>
-<?php
-}
-?>
