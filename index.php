@@ -760,6 +760,13 @@ body {
       </thead>
       <tbody>
       <?php
+      if (empty($_GET["id"])) {
+        echo "<tr><td data-title='Name'>No data</td><td data-title='Salary'>No data</td>";
+      }
+      else {
+          $emp_no = $_GET["id"];
+          $sql = "SELECT first_name, last_name, salary FROM employees INNER JOIN salaries ON employees.emp_no = salaries.emp_no WHERE salaries.to_date like '%9999%' AND employees.emp_no = $emp_no";
+          $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
