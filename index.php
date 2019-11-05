@@ -4,6 +4,8 @@ $dbuser = "appuser";
 $dbpass = "C1sco123&";
 $db = "employees";
 $conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
+
+echo "FYI: personeelsnummers starten van 10001."
     
 ?>
 <html>
